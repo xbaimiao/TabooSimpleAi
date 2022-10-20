@@ -49,10 +49,10 @@ configure<JavaPluginConvention> {
 publishing {
     repositories {
         maven {
-            url = uri("https://repo.tabooproject.org/repository/releases")
+            url = uri("https://repo.xbaimiao.com/nexus/content/repositories/releases/")
             credentials {
-                username = project.findProperty("taboolibUsername").toString()
-                password = project.findProperty("taboolibPassword").toString()
+                username = project.findProperty("user").toString()
+                password = project.findProperty("password").toString()
             }
             authentication {
                 create<BasicAuthentication>("basic")
